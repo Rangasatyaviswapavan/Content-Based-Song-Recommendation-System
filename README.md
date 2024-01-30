@@ -1,6 +1,6 @@
 # Content-Based Song Recommendation System
 
-This project implements a simple content-based recommendation system for songs using Python and Flask. It analyzes song lyrics to recommend similar songs based on their textual content.
+This project implements a simple content-based recommendation system for songs using Python, Flask, NLTK, and scikit-learn. It analyzes song lyrics to recommend similar songs based on their textual content.
 
 ## Features
 
@@ -17,7 +17,7 @@ This project implements a simple content-based recommendation system for songs u
     ```
 2. Clone the repository:
     ```bash
-    git clone https://github.com/Rangasatyaviswapavan/Content-Based-Song-Recommendation-System.git
+    git clone https://github.com/yourusername/content-based-song-recommendation.git
     ```
 3. Navigate to the project directory:
     ```bash
