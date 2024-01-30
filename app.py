@@ -35,15 +35,13 @@ def recommendation(song_name):
         res.append(df.iloc[i[0]].song)
     return res
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
-
-@app.route('/recommend', methods=['POST'])
-def recommend():
-    song_name = request.form['song']
-    recommended_songs = recommendation(song_name)
-    return render_template('recommendation.html', song=song_name, recommended_songs=recommended_songs)
+    recommended_songs = []
+    if request.method == 'POST':
+        song_name = request.form['song']
+        recommended_songs = recommendation(song_name)
+    return render_template('index.html', recommended_songs=recommended_songs)
 
 if __name__ == '__main__':
     app.run(debug=True)
